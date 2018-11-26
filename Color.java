@@ -1,12 +1,12 @@
 package ru.lessons.Pavel.trafficLight;
 
- abstract class Color{
+abstract class Color {
     private String name;
     private int seconds;
 
     abstract void toBurn();
 
-    void pause(){
+    void pause() {
         try {
             Thread.sleep(getSeconds());
         } catch (InterruptedException e) {
@@ -14,11 +14,11 @@ package ru.lessons.Pavel.trafficLight;
         }
     }
 
-    public int getSeconds() {
+    int getSeconds() {
         return seconds;
     }
 
-    public void setSeconds(int seconds) {
+    void setSeconds(int seconds) {
         this.seconds = seconds * 1000;
     }
 
@@ -29,4 +29,4 @@ package ru.lessons.Pavel.trafficLight;
     public void setName(String name) {
         this.name = name;
     }
- }
+}

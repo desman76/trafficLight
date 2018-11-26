@@ -20,12 +20,12 @@ class Work {
 
         Scanner scanner = new Scanner(System.in);
 
-        for (Color currentColor : colors) {
-            System.out.println("Введите количество секунд для цвета: " + currentColor.getName());
-            while (currentColor.getSeconds() == 0) {
+        for (Color color : colors) {
+            System.out.println("Введите количество секунд для цвета: " + color.getName());
+            while (color.getSeconds() == 0) {
                 if (scanner.hasNextInt()) {
                     int seconds = scanner.nextInt();
-                    currentColor.setSeconds(seconds);
+                    color.setSeconds(seconds);
                 } else {
                     System.out.println("Введите числовое значение: ");
                     scanner.next();
